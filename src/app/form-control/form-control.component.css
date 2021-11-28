@@ -1,0 +1,11 @@
+.boxContainer {
+    border-radius: 15px;
+}
+.mat-divider{
+    margin: 2em;
+    border-top-color: #ffc107;
+}
+#terms{
+    width: 1rem;
+    height: 1rem;
+}

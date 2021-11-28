@@ -1,0 +1,15 @@
+.feedback-form-control{
+    padding: 5em;
+}
+
+.mat-card-content {
+    padding: 2em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+}
+form{
+    background-color: lavender;
+    padding: 2em;
+    border-radius: 15px;
+}
