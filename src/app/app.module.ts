@@ -18,6 +18,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { PersonTestComponent } from './person-test/person-test.component';
 
 
 
@@ -32,7 +33,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     AppComponent,
     NavbarComponent,
     FeedbackComponent,
-    FormControlComponent
+    FormControlComponent,
+    PersonTestComponent
 
   ],
   imports: [

@@ -1,119 +1,126 @@
 <div class="bg-secondary p-5">
-    <mat-form-field>
-  <div class="bg-dark m-2 p-3 boxContainer border border-warning">
-    <h3 class="text-center pt-3 pb-2 text-light">
-      <strong>Form-Control-Validation</strong>
-    </h3>
+  <mat-form-field>
+    <div class="bg-dark m-2 p-3 boxContainer border border-warning">
+      <h3 class="text-center pt-3 pb-2 text-light">
+        <strong>Form-Control-Validation</strong>
+      </h3>
 
-    <div class="bg-light boxContainer p-2 border border-warning">
-      <!--Firstname-->
-      <div class="p-2 w-100">
-        <input
-          mat-input
-          placeholder="First name"
-          name="firstName"
-        [(ngModel)]="firstName"
-        #name="ngModel"
-          required
-          minlength="2"
-          pattern="^[a-zA-Z]*$"
-          class="w-50"
-        />
-        <mat-error></mat-error>
-        <mat-error></mat-error>
-        <mat-error></mat-error>
+      <div class="bg-light boxContainer p-2 border border-warning">
+        <!--Firstname-->
+        <div class="p-2 w-100">
+          <input
+            mat-input
+            placeholder="First name"
+            #firstName="ngModel"
+            [(ngModel)]="firstName"
+            required
+            minlength="2"
+            pattern="^[a-zA-Z]*$"
+            class="w-50"
+          />
+          <mat-error></mat-error>
+          <mat-error></mat-error>
+          <mat-error></mat-error>
+        </div>
+        <!--Lastname-->
+        <div class="p-2 w-100">
+          <input
+            mat-input
+            placeholder="Last name"
+            #lastName="ngModel"
+            [(ngModel)]="lastName"
+            required
+            minlength="2"
+            pattern="^[a-zA-Z]*$"
+            class="w-50"
+          />
+          <mat-error></mat-error>
+          <mat-error></mat-error>
+          <mat-error></mat-error>
+        </div>
+        <!--PersonID-->
+        <div class="p-2 w-100">
+          <input
+            mat-input
+            placeholder="PersonID"
+            name="personID"
+            required
+            minlength="11"
+            pattern="^[a-zA-Z]*$"
+            class="w-50"
+          />
+        </div>
+        <!--Email-->
+        <div class="p-2 w-100">
+          <input
+            mat-input
+            placeholder="Email"
+            name="email"
+            required
+            minlength="11"
+            pattern="^[a-zA-Z]*$"
+            class="w-50"
+          />
+        </div>
       </div>
-      <!--Lastname-->
-      <div class="p-2 w-100">
-        <input
-          mat-input
-          placeholder="Last name"
-          name="lastName"
-          required
-          minlength="2"
-          pattern="^[a-zA-Z]*$"
-          class="w-50"
-        />
-        <mat-error></mat-error>
-        <mat-error></mat-error>
-        <mat-error></mat-error>
-      </div>
-      <!--PersonID-->
-      <div class="p-2 w-100">
-        <input
-          mat-input
-          placeholder="PersonID"
-          name="personID"
-          required
-          minlength="11"
-          pattern="^[a-zA-Z]*$"
-          class="w-50"
-        />
-      </div>
-      <!--Email-->
-      <div class="p-2 w-100">
-        <input
-          mat-input
-          placeholder="Email"
-          name="email"
-          required
-          minlength="11"
-          pattern="^[a-zA-Z]*$"
-          class="w-50"
-        />
-      </div>
-    </div>
 
-    <mat-divider></mat-divider>
+      <mat-divider></mat-divider>
 
-    <div class="bg-light boxContainer mt-3 p-2 border border-warning">
-      <!--Username-->
-      <div class="p-2 w-50">
-        <input
-          mat-input
-          placeholder="Username"
-          name="userName"
-          required
-          minlength="11"
-          pattern="^[a-zA-Z]*$"
-          class="w-50"
-        />
+      <div class="bg-light boxContainer mt-3 p-2 border border-warning">
+        <!--Username-->
+        <div class="p-2 w-50">
+          <input
+            mat-input
+            placeholder="Username"
+            name="userName"
+            required
+            minlength="11"
+            pattern="^[a-zA-Z]*$"
+            class="w-50"
+          />
+        </div>
+        <!--Password-->
+        <div class="p-2 w-50">
+          <input
+            mat-input
+            placeholder="Password"
+            name="passWord"
+            required
+            minlength="11"
+            pattern="^[a-zA-Z]*$"
+            class="w-50"
+          />
+        </div>
+        <!--Confirm Password-->
+        <div class="p-2 w-50">
+          <input
+            mat-input
+            placeholder="Confirm Password"
+            name="c-passWord"
+            required
+            minlength="11"
+            pattern="^[a-zA-Z]*$"
+            class="w-50"
+          />
+        </div>
+        <div class="bg-warning boxContainer w-50">
+          <input
+            type="checkbox"
+            name="termsandconditions"
+            id="terms"
+            class="m-2"
+            required
+          />
+          <span class="text-dark"
+            ><strong>Click Here to agree the Terms & Conditions</strong></span
+          >
+        </div>
       </div>
-      <!--Password-->
-      <div class="p-2 w-50">
-        <input
-          mat-input
-          placeholder="Password"
-          name="passWord"
-          required
-          minlength="11"
-          pattern="^[a-zA-Z]*$"
-          class="w-50"
-        />
-      </div>
-      <!--Confirm Password-->
-      <div class="p-2 w-50">
-        <input
-          mat-input
-          placeholder="Confirm Password"
-          name="c-passWord"
-          required
-          minlength="11"
-          pattern="^[a-zA-Z]*$"
-          class="w-50"
-        />
-    </div>
-    <div class="bg-warning boxContainer w-50 ">
-        <input type="checkbox" name="termsandconditions" id="terms" class="m-2 " required>
-        <span class="text-dark"><strong>Click Here to agree the Terms & Conditions</strong></span>
-    </div>
-    </div>
-    <mat-divider></mat-divider>
+      <mat-divider></mat-divider>
 
-    <div class="btn btn-warning d-flex justify-content-center">
+      <div class="btn btn-warning d-flex justify-content-center">
         <span class="text-white">Submit</span>
+      </div>
     </div>
-
-  </div>
-</mat-form-field>
+  </mat-form-field>
 </div>
