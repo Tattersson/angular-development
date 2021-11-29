@@ -8,16 +8,6 @@ import { Person } from './person';
 })
 export class FormControlComponent implements OnInit {
 
-  firstName: string = '';
-  lastName: string = '';
-
-  onSubmit(){
-
-    console.log(this.firstName);
-    console.log(this.lastName);
-
-  }
-
   constructor() {
 
 
