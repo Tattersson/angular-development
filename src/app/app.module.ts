@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { FormControlComponent } from './form-control/form-control.component';
+import { FinnkinoComponent } from './finnkino/finnkino.component';
 
 //Here comes the premade materials
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -19,6 +20,10 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { CinemaPipe } from './cinema.pipe';
+
 
 
 
@@ -33,7 +38,9 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     NavbarComponent,
     FeedbackComponent,
-    FormControlComponent
+    FormControlComponent,
+    FinnkinoComponent,
+    CinemaPipe
 
   ],
   imports: [
@@ -49,7 +56,9 @@ import { FormsModule } from '@angular/forms';
     MatProgressBarModule,
     MatSliderModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    HttpClientModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
