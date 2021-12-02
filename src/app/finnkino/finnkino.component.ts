@@ -8,11 +8,11 @@ import { MoviesService } from '../movies.service';
   styleUrls: ['./finnkino.component.css']
 })
 export class FinnkinoComponent implements OnInit {
-  private cinemaData : Observable<any>;
+  public cinemaData: Observable<any>;
 
-  constructor( private moviesService: MoviesService) {
+  constructor(private moviesService: MoviesService) {
     this.cinemaData = this.moviesService.getData();
-   }
+  }
 
 
 
