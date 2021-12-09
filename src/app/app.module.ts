@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { FormControlComponent } from './form-control/form-control.component';
-import { FinnkinoComponent } from './finnkino/finnkino.component';
 
 //Here comes the premade materials
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -39,7 +38,6 @@ import { CinemaPipe } from './cinema.pipe';
     NavbarComponent,
     FeedbackComponent,
     FormControlComponent,
-    FinnkinoComponent,
     CinemaPipe
 
   ],

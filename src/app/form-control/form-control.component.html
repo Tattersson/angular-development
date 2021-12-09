@@ -43,12 +43,12 @@
         <div class="p-2 w-75">
           <input
             mat-input
-            placeholder="PersonID"
+            placeholder="PersonID - only numbers"
             name="personID"
             [(ngModel)]="person.personid"
             required
             minlength="11"
-            pattern="^[a-zA-Z]*$"
+            pattern="[0-9]"
             class="w-75"
           />
         </div>
@@ -60,8 +60,8 @@
             name="email"
             [(ngModel)]="person.email"
             required
-            minlength="11"
-            pattern="^[a-zA-Z]*$"
+            minlength="3"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$"
             class="w-75"
           />
         </div>
@@ -93,7 +93,7 @@
             [(ngModel)]="person.password"
             required
             minlength="11"
-            pattern="^[a-zA-Z]*$"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
             class="w-75"
           />
         </div>
@@ -107,20 +107,17 @@
             [(ngModel)]="person.repassword"
             required
             minlength="11"
-            pattern="^[a-zA-Z]*$"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
             class="w-75"
           />
         </div>
-        <label class="checkbox p-2" >
-          <input
-            type="checkbox"
-          />
-        </label>
+
 
       </div>
       <mat-divider></mat-divider>
 
-      <button type="submit" class="btn btn-success" [disabled]="form1.invalid">Submit</button> 
+      <button type="submit" class="btn btn-success m-2 w-25 d-flex" [disabled]="form1.invalid">Submit</button>
+      <button type="reset" class="btn btn-warning m-2 w-25 d-flex">Reset</button>
     </div>
   </mat-form-field>
 </form>
