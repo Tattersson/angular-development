@@ -21,7 +21,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatExpansionModule} from '@angular/material/expansion';
-import { CinemaComponent } from './cinema/cinema.component';
+
 
 
 
@@ -38,7 +38,7 @@ import { CinemaComponent } from './cinema/cinema.component';
     NavbarComponent,
     FeedbackComponent,
     FormControlComponent,
-    CinemaComponent
+
 
   ],
   imports: [
