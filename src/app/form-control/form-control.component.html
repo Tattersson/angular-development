@@ -12,7 +12,6 @@
         <!--Firstname-->
         <div class="p-2 w-75">
           <input
-            mat-input
             placeholder="First name"
             [(ngModel)]="person.firstName"
             required
@@ -20,14 +19,13 @@
             pattern="^[a-zA-Z]*$"
             class="w-75"
           />
-          <mat-error></mat-error>
+          <mat-error *ngIf="form1.errors?.['required'] "></mat-error>
           <mat-error></mat-error>
           <mat-error></mat-error>
         </div>
         <!--Lastname-->
         <div class="p-2 w-75">
           <input
-            mat-input
             placeholder="Last name"
             [(ngModel)]="person.lastName"
             required
@@ -35,27 +33,24 @@
             pattern="^[a-zA-Z]*$"
             class="w-75"
           />
+          <mat-error *ngIf="form1.errors?.['required'] "></mat-error>
           <mat-error></mat-error>
           <mat-error></mat-error>
-          <mat-error></mat-error>
-        </div>
-        <!--PersonID-->
-        <div class="p-2 w-75">
+
           <input
-            mat-input
             placeholder="PersonID - only numbers"
             name="personID"
             [(ngModel)]="person.personid"
             required
-            minlength="11"
+            minlength="6"
             pattern="[0-9]"
             class="w-75"
           />
         </div>
-        <!--Email-->
+
+
         <div class="p-2 w-75" >
           <input
-            mat-input
             placeholder="Email"
             name="email"
             [(ngModel)]="person.email"
@@ -73,12 +68,11 @@
         <!--Username-->
         <div class="p-2 w-75">
           <input
-            mat-input
             placeholder="Username"
             [(ngModel)]="person.username"
             name="userName"
             required
-            minlength="11"
+            minlength="4"
             pattern="^[a-zA-Z]*$"
             class="w-75"
           />
@@ -86,7 +80,6 @@
         <!--Password-->
         <div class="p-2 w-75">
           <input
-            mat-input
             type="password"
             placeholder="Password"
             name="passWord"
@@ -100,7 +93,6 @@
         <!--Confirm Password-->
         <div class="p-2">
           <input
-            mat-input
             type="password"
             placeholder="Confirm Password"
             name="rePassword"
@@ -116,8 +108,8 @@
       </div>
       <mat-divider></mat-divider>
 
-      <button type="submit" class="btn btn-success m-2 w-25 d-flex" [disabled]="form1.invalid">Submit</button>
-      <button type="reset" class="btn btn-warning m-2 w-25 d-flex">Reset</button>
+      <button type="submit" class="btn btn-success m-2 w-25 d-flex" [disabled]="form1.invalid" (click)="onSubmit(form1)">Submit</button>
+      <button type="reset" class="btn btn-warning m-2 w-25 d-flex" (click)="onReset(form1)">Reset</button>
     </div>
   </mat-form-field>
 </form>
