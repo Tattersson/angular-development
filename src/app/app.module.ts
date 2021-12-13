@@ -21,11 +21,17 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {Routes, RouterModule} from "@angular/router";
+import {MatMenuModule} from '@angular/material/menu';
+import { AssentlyComponent } from './assently/assently.component';
 
 
 
 
-
+const appRoutes: Routes = [
+  { path: 'form-control', component: FormControlComponent },
+  { path: 'feedback', component: FeedbackComponent}
+];
 
 
 
@@ -38,6 +44,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     NavbarComponent,
     FeedbackComponent,
     FormControlComponent,
+    AssentlyComponent
 
 
   ],
@@ -56,7 +63,12 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatInputModule,
     MatFormFieldModule,
     HttpClientModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatMenuModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,10 +1,27 @@
+<base href="/">
 <mat-toolbar color="primary">
   <mat-toolbar-row>
    <mat-icon>group_work</mat-icon>
     <div class="spacer"></div>
-    <a mat-button>Main Menu</a>
+    <a [matMenuTriggerFor]="menu" mat-button>Main Menu</a>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>ballot</mat-icon>
+        <span>Feedback</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>feedback</mat-icon>
+        <span>Form Control Validation</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>work</mat-icon>
+        <span>Assently Templates List</span>
+      </button>
+    </mat-menu>
     <a mat-button>Projects</a>
     <a mat-button>About</a>
     <a mat-button>Leave Feedback</a>
   </mat-toolbar-row>
 </mat-toolbar>
+
+
