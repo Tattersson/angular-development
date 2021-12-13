@@ -13,7 +13,7 @@ import { Config} from "./config";
 export class AuthService {
 
   url = "https://test.assently.com/api/v2/findcases";
-  auth = "Basic =ZGNlZTBlNDctOTg4MC00NDgzLWIxNzktNjI3MmZmZTk2ZjkzOnlRNGoxTG1hMlFqd1g0TXFyTDVFMjhmTEttRndkTjlkR0dub0NyVjA=";
+  auth = "Basic ZGNlZTBlNDctOTg4MC00NDgzLWIxNzktNjI3MmZmZTk2ZjkzOnlRNGoxTG1hMlFqd1g0TXFyTDVFMjhmTEttRndkTjlkR0dub0NyVjA=";
   users: any;
 
   constructor( private httpClient: HttpClient) {
