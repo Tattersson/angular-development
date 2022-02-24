@@ -1,0 +1,40 @@
+.container{
+  background-color: aliceblue;
+  border-radius: 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 1000px;
+  padding: 25px;
+
+}
+.body{
+  background-color: beige;
+}
+.form-Container{
+  margin: 25px;
+}
+
+.input-mat{
+  background-color: mediumpurple;
+}
+
+.btnSubmit{
+  border-radius: 10px;
+  background-color: #7eac00;
+  color: white;
+  border: none;
+  margin: 10px;
+  margin-top: 30px;
+  padding: 5px;
+}
+.formFlex{
+  display: flex;
+  width: content-box;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.column{
+  flex-basis: 100%;
+
+}
