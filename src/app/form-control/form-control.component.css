@@ -9,3 +9,10 @@
     width: 1rem;
     height: 1rem;
 }
+.boxedContainer{
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 10px;
+
+}

@@ -1,0 +1,55 @@
+<div class="container">
+  <h1>Reactive Form</h1>
+
+  <form [formGroup]="myForm">
+
+    <div class="values">
+      Value: {{myForm.value | json}}
+    </div>
+<div class="form-Container formFlex">
+
+  <mat-form-field hintLabel="Enter your Fullname" appearance="fill" class="column">
+      <mat-label> Name </mat-label>
+
+      <input matInput
+      type="text"
+      class="formControl"
+      formControlName="name"
+      required>
+  </mat-form-field>
+
+
+
+  </div>
+
+    <br>
+<mat-form-field hintLabel="Enter your Email Address" appearance="fill" class="column">
+  <mat-label>Email</mat-label>
+  <input matInput
+  type="email"
+  class="formControl"
+  formControlName="email"
+  required>
+</mat-form-field>
+  <br>
+  <mat-form-field hintLabel="Enter your desired username" appearance="fill" class="column">
+    <mat-label> Username </mat-label>
+
+    <input matInput
+           type="text"
+           class="formControl"
+           formControlName="username"
+           required>
+  </mat-form-field>
+
+
+  <br>
+
+  <button class="btnSubmit column">
+    <label>Submit</label>
+  </button>
+
+
+
+
+</form>
