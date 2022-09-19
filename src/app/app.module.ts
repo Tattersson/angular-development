@@ -23,7 +23,6 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {Routes, RouterModule} from "@angular/router";
 import {MatMenuModule} from '@angular/material/menu';
-import { AssentlyComponent } from './assently/assently.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { AngularTestComponent } from './angular-test/angular-test.component';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
@@ -47,7 +46,6 @@ const appRoutes: Routes = [
     NavbarComponent,
     FeedbackComponent,
     FormControlComponent,
-    AssentlyComponent,
     ReactiveFormComponent,
     AngularTestComponent
 
