@@ -1,23 +1,15 @@
-
 <div class="container">
-<h1>Angular 2022</h1>
+  <h1>Angular 2022</h1>
 
-  <form [formGroup]="currencyForm" >
+  <form [formGroup]="currencyForm">
 
     <div class="currencySection">
-    <mat-form-field appearance="fill">
-    <mat-label>Amount</mat-label>
-      <mat-icon matPrefix>euro</mat-icon>
-      <input matInput
-          placeholder="Amount"
-          formControlName="amount"
-             name="amount"
-             type="number"
-             class="form-control"
-          >
-    </mat-form-field>
-      <div *ngIf="amount?.invalid && amount?.touched"
-           class="alert">
+      <mat-form-field appearance="fill">
+        <mat-label>Amount</mat-label>
+        <mat-icon matPrefix>euro</mat-icon>
+        <input matInput placeholder="Amount" formControlName="amount" name="amount" type="number" class="form-control">
+      </mat-form-field>
+      <div *ngIf="amount?.invalid && amount?.touched" class="alert">
         <div *ngIf="amount?.errors?.['required']">
           Please fill in the blank
         </div>
@@ -26,18 +18,19 @@
         </div>
       </div>
 
-    <mat-button-toggle-group class="currency" #toggleGroup="matButtonToggleGroup" formControlName="currency" name="currency">
-      <mat-button-toggle value="{{this.usd}}">USD</mat-button-toggle>
-      <mat-button-toggle value="{{this.sek}}">SEK</mat-button-toggle>
-      <mat-button-toggle value="{{this.gbp}}">GBP</mat-button-toggle>
-    </mat-button-toggle-group>
+      <mat-button-toggle-group class="currency" #toggleGroup="matButtonToggleGroup" formControlName="currency"
+        name="currency">
+        <mat-button-toggle value="{{this.usd}}">USD</mat-button-toggle>
+        <mat-button-toggle value="{{this.sek}}">SEK</mat-button-toggle>
+        <mat-button-toggle value="{{this.gbp}}">GBP</mat-button-toggle>
+      </mat-button-toggle-group>
 
       {{toggleGroup.value}}
 
       <div class="amount">
         <h3>Amount to be paid:</h3>
         <div>
-          <!--FAILED-->
+          {{this.calculatedAmount}}
         </div>
       </div>
 
@@ -48,13 +41,8 @@
       <mat-form-field appearance="fill">
         <mat-label>Firstname</mat-label>
         <mat-icon matPrefix>people</mat-icon>
-        <input matInput
-               placeholder="Firstname"
-               formControlName="firstName"
-               class="userInputField"
-        >
-        <div *ngIf="firstName?.invalid && amount?.touched"
-             class="alert">
+        <input matInput placeholder="Firstname" formControlName="firstName" class="userInputField">
+        <div *ngIf="firstName?.invalid && amount?.touched" class="alert">
           <div *ngIf="firstName?.errors?.['required']">
             Please fill in the blank
           </div>
@@ -70,15 +58,10 @@
       <mat-form-field appearance="fill">
         <mat-label>Lastname</mat-label>
         <mat-icon matPrefix>people</mat-icon>
-        <input matInput
-               placeholder="Lastname"
-               formControlName="lastName"
-               class="userInputField"
-        >
+        <input matInput placeholder="Lastname" formControlName="lastName" class="userInputField">
       </mat-form-field>
       <br>
-      <div *ngIf="lastName?.invalid && amount?.touched"
-           class="alert">
+      <div *ngIf="lastName?.invalid && amount?.touched" class="alert">
         <div *ngIf="lastName?.errors?.['required']">
           Please fill in the blank
         </div>
@@ -92,15 +75,10 @@
       <mat-form-field appearance="fill">
         <mat-label>email</mat-label>
         <mat-icon matPrefix>email</mat-icon>
-        <input matInput
-               placeholder="Email"
-               formControlName="email"
-               class="userInputField"
-        >
+        <input matInput placeholder="Email" formControlName="email" class="userInputField">
       </mat-form-field>
       <br>
-      <div *ngIf="email?.invalid && amount?.touched"
-           class="alert">
+      <div *ngIf="email?.invalid && amount?.touched" class="alert">
         <div *ngIf="email?.errors?.['required']">
           Please fill in the blank
         </div>
