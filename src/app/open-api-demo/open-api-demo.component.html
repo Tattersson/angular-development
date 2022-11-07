@@ -1,0 +1,10 @@
+<h1>Finnkino</h1>
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let item of cinemaData | async"> 
+               
+               {{item?.News.NewsArticle.Title}}
+            
+    </mat-expansion-panel>
+</mat-accordion>
+
+

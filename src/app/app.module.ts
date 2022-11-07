@@ -26,6 +26,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { AngularTestComponent } from './angular-test/angular-test.component';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import { OpenApiDemoComponent } from './open-api-demo/open-api-demo.component';
+import { CinemaServiceService } from './cinema-service.service';
 
 
 
@@ -47,7 +49,8 @@ const appRoutes: Routes = [
     FeedbackComponent,
     FormControlComponent,
     ReactiveFormComponent,
-    AngularTestComponent
+    AngularTestComponent,
+    OpenApiDemoComponent
 
 
   ],
@@ -75,7 +78,9 @@ const appRoutes: Routes = [
 		),
 		MatButtonToggleModule
 	],
-  providers: [],
+  providers: [
+		CinemaServiceService
+  ],
   bootstrap: [AppComponent]
 })
 
