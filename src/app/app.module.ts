@@ -25,13 +25,9 @@ import { Routes, RouterModule } from "@angular/router";
 import { MatMenuModule } from '@angular/material/menu';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { AngularTestComponent } from './angular-test/angular-test.component';
-<<<<<<< HEAD
-import { MatButtonToggleModule } from "@angular/material/button-toggle";
-=======
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import { OpenApiDemoComponent } from './open-api-demo/open-api-demo.component';
 import { CinemaServiceService } from './cinema-service.service';
->>>>>>> baba44c7e6ab9ec65f24cf94f03008fe290359d0
 
 
 
