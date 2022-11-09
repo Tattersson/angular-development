@@ -18,11 +18,15 @@ export class CinemaServiceService {
     
     return this.httpClient.get(this.url, {responseType: 'text'}).pipe(map(response => {
       console.log('getXMLData...' + response);
-      let newsData= [];
+      let newsData= {};
       
       //Muunnetaan XML -data JSON muotoon.
 
-      newsData = require('xml2js').parseString;
+      xml2js.parseString(xml, {explicitArray: false, ignoreAttrs: true }, (err, result) => {
+        
+      })
+
+   /*    newsData = require('xml2js').parseString;
       var xml = "<root>Hello xml2js!</root>"
       newsData(xml, function ( _err: any, result: any)
       {
@@ -33,7 +37,7 @@ export class CinemaServiceService {
 
       });
 
-      return Array.from(newsData);
+      return Array.from(newsData); */
       
     }))
 
