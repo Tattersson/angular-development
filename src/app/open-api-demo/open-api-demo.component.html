@@ -1,9 +1,15 @@
-<h1>Finnkino</h1>
-<mat-accordion>
-    <mat-expansion-panel *ngFor="let item of cinemaData | async"> 
-               
-               {{item?.News.NewsArticle.Title}}
-            
+<h1>Finnkino rajapinnasta hakeminen</h1>
+<mat-accordion class="accordion">
+    <mat-expansion-panel *ngFor="let item of cinemaData | async" class="container-media"> 
+              
+        <mat-expansion-panel-header class="header">
+             <mat-panel-title>{{item.Title}}</mat-panel-title>
+        </mat-expansion-panel-header>   
+        <div>
+        
+                    <p>{{item.HTMLLead}}</p>
+                    <a href="{{item.ArticleURL}}">Lue lisää</a>
+        </div>
     </mat-expansion-panel>
 </mat-accordion>
 
