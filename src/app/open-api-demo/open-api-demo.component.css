@@ -1,18 +1,47 @@
-
+/*
 .accordion{
- display: block;
- margin-left:auto;
- margin-right: auto;
- width: 50%;
+display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem ,1fr));
+
+  margin: 50px;
 }
+.card:hover, .card:active{
+  height: auto;
+  z-index: 1;
+  grid-column: 1/-1;
+
+}
+
 
 .header{
     padding:35px;
     text-decoration: none;
     font-weight: 500;
-}
+}*/
+
 h1{
     text-align: center;
-    padding: 25px;
+    padding: 50px;
     text-transform: uppercase;
+}
+.card {
+  text-align: center;
+}
+.card:active{
+  transition: height 2s ease-in 150ms;
+}
+.accordion{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%
+}
+.button:hover{
+  transform: scale(1.1);
+  filter: brightness(85%);
+  transition: ease-in 150ms;
+}
+.card:active{
+  transition: ease-in-out 250ms;
 }

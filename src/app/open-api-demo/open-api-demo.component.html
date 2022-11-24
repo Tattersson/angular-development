@@ -1,16 +1,38 @@
 <h1>Finnkino rajapinnasta hakeminen</h1>
-<mat-accordion class="accordion">
-    <mat-expansion-panel *ngFor="let item of cinemaData | async" class="container-media"> 
-              
-        <mat-expansion-panel-header class="header">
-             <mat-panel-title>{{item.Title}}</mat-panel-title>
-        </mat-expansion-panel-header>   
-        <div>
-        
-                    <p>{{item.HTMLLead}}</p>
-                    <a href="{{item.ArticleURL}}">Lue lisää</a>
-        </div>
-    </mat-expansion-panel>
-</mat-accordion>
 
+<!--
+<mat-accordion class="accordion">
+  <mat-expansion-panel *ngFor="let item of cinemaData | async" class="container-media" class="card">
+
+    <mat-expansion-panel-header class="header">
+      <mat-panel-title>{{item.Title}}</mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="content-wrapper">
+      <div class="content-para">
+        <p>{{item.HTMLLead}}</p>
+      </div>
+      <div class="content-link">
+        <a href="{{item.ArticleURL}}">Lue lisää</a>
+      </div>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion
+-->
+
+
+<mat-accordion class="accordion">
+  <mat-expansion-panel *ngFor="let item of cinemaData | async" class="card">
+
+    <mat-expansion-panel-header class="card-title">
+        <mat-panel-title>{{item.Title}}</mat-panel-title>
+
+    </mat-expansion-panel-header>
+    <div class="content">
+        <p>{{item.HTMLLead}}</p>
+
+
+        <a mat-raised-button href="{{item.ArticleURL}}" color="accent" class="button">Lue lisää</a>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>
 
