@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {  Observable } from 'rxjs';
 import { CinemaServiceService } from '../cinema-service.service';
+import { SearchPipe } from '../pipes/search.pipe';
 
 
 
@@ -12,6 +13,19 @@ import { CinemaServiceService } from '../cinema-service.service';
 })
 export class OpenApiDemoComponent implements OnInit {
 
+  title = 'angular-text-search-highlight';
+  searchText = '';
+  characters = [
+    'Ant-Man',
+    'Aquaman',
+    'Asterix',
+    'The Atom',
+    'The Avengers',
+    'Batgirl',
+    'Batman',
+    'Batwoman',
+
+  ]
 
   constructor(private cinemaService: CinemaServiceService) {
    

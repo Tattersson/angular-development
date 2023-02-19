@@ -45,3 +45,9 @@ h1{
 .card:active{
   transition: ease-in-out 250ms;
 }
+.searchfield{
+  text-align: center;
+  margin: auto;
+  padding: 1em 0em 1em;
+ background-color: grey;
+}
