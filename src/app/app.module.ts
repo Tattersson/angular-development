@@ -28,6 +28,7 @@ import { AngularTestComponent } from './angular-test/angular-test.component';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import { OpenApiDemoComponent } from './open-api-demo/open-api-demo.component';
 import { CinemaServiceService } from './cinema-service.service';
+import { SearchPipe } from './pipes/search.pipe';
 
 
 
@@ -50,7 +51,8 @@ const appRoutes: Routes = [
     FormControlComponent,
     ReactiveFormComponent,
     AngularTestComponent,
-    OpenApiDemoComponent
+    OpenApiDemoComponent,
+    SearchPipe
 
 
 	],
