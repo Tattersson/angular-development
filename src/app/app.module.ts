@@ -36,15 +36,17 @@ import { compileClassMetadata } from '@angular/compiler';
 
 
 const appRoutes: Routes = [
-	{ path: 'form-control', component: FormControlComponent },
+	{ path: 'form-control', component: FormControlComponent, title: 'Form Control' },
 	{ path: 'feedback', component: FeedbackComponent },
-	{ path: 'test2', component: AngularTestRerunComponent },
+	{ path: 'test2', component: AngularTestRerunComponent, title: 'Angular Test 2023'},
 	{ path: 'open-api', component: OpenApiDemoComponent},
 	{
 		path: 'reactive', component: ReactiveFormComponent
 	},
 	{
-		path: 'test1', component: AngularTestComponent
+		path: 'test1', 
+		component: AngularTestComponent,
+		title: 'Angular Test 2022'
 	}
 ];
 

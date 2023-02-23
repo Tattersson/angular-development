@@ -1,6 +1,95 @@
+<h1 class="center">Angular Test - 23.02.2023</h1>
 <div class="container">
 
+    <h2>Lainalaskuri</h2>
 
-    <p>Angular Test Works</p>
+
+    <form [formGroup]="loanForm" (ngSubmit)="onSubmit()">
+
+
+        <div class="loanAmountLabelContainer">
+            <h2>Loan amount</h2>
+            <label>{{this.loanAmount}} Euros</label>
+        </div>
+        <mat-slider class="slider" min="100" max="10000" step="100" value="0" [(ngModel)]="loanAmount" name="loanAmount"
+            thumbLabel="true" [ngModelOptions]="{standalone: true}">
+            <input matSliderThumb>
+        </mat-slider> <br>
+
+        <div class="loanAmountLabelContainer">
+            <h2>Loan time</h2>
+            <label> {{this.loanTime}} years</label>
+        </div>
+        <mat-slider class="slider" min="1" max="10" step="step" tickInterval="1" tickLabel="name"
+            showTickMarks="showTicks" value="0" [(ngModel)]="loanTime" name="loanTime" thumbLabel="true"
+            [ngModelOptions]="{standalone: true}">
+            <input matSliderThumb>
+        </mat-slider>
+
+        <div class="calculatedContainer">
+            <h2>Calculated monthly pay</h2>
+
+            <!-- <span>{{roundedResult}}</span> -->
+
+            <button mat-raised-button color="accent" (click)="calculateMonthlypay()">Calculate</button>
+
+        </div>
+
+        <div class="personelInformation">
+
+            <!--Firstname-->
+            <mat-form-field appearance="fill" color="accent">
+                <mat-label>Firstname</mat-label>
+                <input matInput type="text" id="firstname" name="firstname" formControlName="firstname" class="form-control" [ngClass]="" >
+            </mat-form-field>
+
+            <div *ngIf="loanForm.controls['firstname'].invalid && (loanForm.controls['firstname'].touched || loanForm.controls['firstname'].dirty)" class="alert">
+
+                    <div *ngIf="loanForm.errors?.['required']">
+                        Name required.
+                    </div>
+                    <div *ngIf="loanForm.errors?.['minLength']">
+                        Name too short.
+                    </div>
+                    <div *ngIf="loanForm.errors?.['pattern']">
+                        Name contains invalid characters.
+                    </div>
+
+            </div>
+
+
+            <br>
+
+            <!--Lastname-->
+            <mat-form-field appearance="fill" color="accent">
+                <mat-label>Lastname</mat-label>
+                <input matInput name="lastname" formControlName="lastname">
+            </mat-form-field><br>
+
+            <!--NationalID-->
+            <mat-form-field appearance="fill" color="accent">
+                <mat-label>NationalID</mat-label>
+                <input matInput name="nationalid" formControlName="nationalid">
+            </mat-form-field><br>
+
+            <!--Email-->
+            <mat-form-field appearance="fill" color="accent">
+                <mat-label>Email</mat-label>
+                <input type="email" placeholder="Email" matInput name="email" formControlName="email">
+            </mat-form-field><br>
+
+            <!--Phone-->
+            <mat-form-field appearance="fill" color="accent">
+                <mat-label>Phone</mat-label>
+                <input type="tel" matInput name="phone" formControlName="phone">
+                <mat-hint>Remember to include +358 prefix</mat-hint>
+            </mat-form-field><br>
+        </div>
+
+
+
+
+        <button mat-raised-button color="accent" (click)="onSubmit()">Submit</button>
+    </form>
 
 </div>

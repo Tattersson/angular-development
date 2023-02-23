@@ -13,3 +13,7 @@ bg-assently{
   color: #7eac00;
 }
 
+.center{
+  text-align: center;
+  margin: 3em auto 5em;
+}
