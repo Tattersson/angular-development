@@ -29,13 +29,23 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import { OpenApiDemoComponent } from './open-api-demo/open-api-demo.component';
 import { CinemaServiceService } from './cinema-service.service';
 import { SearchPipe } from './pipes/search.pipe';
+import { AngularTestRerunComponent } from './angular-test-rerun/angular-test-rerun.component';
+import { compileClassMetadata } from '@angular/compiler';
 
 
 
 
 const appRoutes: Routes = [
 	{ path: 'form-control', component: FormControlComponent },
-	{ path: 'feedback', component: FeedbackComponent }
+	{ path: 'feedback', component: FeedbackComponent },
+	{ path: 'test2', component: AngularTestRerunComponent },
+	{ path: 'open-api', component: OpenApiDemoComponent},
+	{
+		path: 'reactive', component: ReactiveFormComponent
+	},
+	{
+		path: 'test1', component: AngularTestComponent
+	}
 ];
 
 
@@ -52,7 +62,8 @@ const appRoutes: Routes = [
     ReactiveFormComponent,
     AngularTestComponent,
     OpenApiDemoComponent,
-    SearchPipe
+    SearchPipe,
+    AngularTestRerunComponent
 
 
 	],

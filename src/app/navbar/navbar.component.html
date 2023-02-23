@@ -7,18 +7,20 @@
     <mat-menu #menu="matMenu">
       <button mat-menu-item>
         <mat-icon>ballot</mat-icon>
-        <span>Feedback</span>
+        <a routerLink="/open-api">Finnkino</a>
       </button>
       <button mat-menu-item>
         <mat-icon>feedback</mat-icon>
-        <span>Form Control Validation</span>
+        <a routerLink="/form-control">Form Control Validation</a>
+        
       </button>
       <button mat-menu-item>
         <mat-icon>work</mat-icon>
-        <span>Assently Templates List</span>
+        <a routerLink="/reactive">Reactive From Component</a>
       </button>
     </mat-menu>
-    <a mat-button>Projects</a>
+    <a mat-button routerLink="/test2">Angular Test 23.02.2023</a>
+    <a mat-button routerLink="/test1">Angular Test 13.12.2022</a>
     <a mat-button>About</a>
     <a mat-button>Leave Feedback</a>
   </mat-toolbar-row>
