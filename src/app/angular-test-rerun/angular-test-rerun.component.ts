@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 
 
+
 @Component({
   selector: 'app-angular-test-rerun',
   templateUrl: './angular-test-rerun.component.html',
@@ -12,10 +13,6 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 })
 export class AngularTestRerunComponent {
 
-  loanAmount = 0;
-  loanTime = 0;
-
-  //Transfer these to GET functions
 
   get firstname() {
     return this.loanForm.get('firstname');
@@ -35,6 +32,14 @@ export class AngularTestRerunComponent {
   get phone() {
     return this.loanForm.get('phone');
   }
+  get loanTime() {
+    return this.loanForm.get('loanTime');
+  }
+
+  get loanAmount() {
+    return this.loanForm.get('loanAmount');
+  }
+
   loanForm!: FormGroup;
 
   constructor() {
@@ -56,7 +61,9 @@ export class AngularTestRerunComponent {
         Validators.pattern("[A-Za-z]")
       ]),
       nationalid: new FormControl('', [
-        Validators.required
+        Validators.required,
+        Validators.pattern("/^(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])[0-9]{2}[a+-][0-9]{3}[A-z0-9]$/") //pattern not working!
+
       ]),
       email: new FormControl('', [
         Validators.required,
@@ -67,7 +74,9 @@ export class AngularTestRerunComponent {
         Validators.minLength(12),
         Validators.maxLength(12),
         Validators.pattern("^[0-9]*$")
-      ])
+      ]),
+      loanTime: new FormControl(''),
+      loanAmount: new FormControl('')
 
 
     });
@@ -94,9 +103,13 @@ export class AngularTestRerunComponent {
   }
 
   calculateMonthlypay() {
+
+    const time = this.loanTime?.value;
+    const amount = this.loanAmount?.value;
+
     var result = 0;
     var roundedResult = 0;
-    result = (Math.pow((1 + 9.5 / 1200), 12 * this.loanTime) * 9.5 / 1200) / ((Math.pow((1 + 9.5 / 1200), 12 * this.loanTime)) - 1) * this.loanAmount;
+    result = (Math.pow((1 + 9.5 / 1200), 12 * time) * 9.5 / 1200) / ((Math.pow((1 + 9.5 / 1200), 12 * time)) - 1) * amount;
 
     roundedResult = parseFloat(result.toFixed(2));
 
@@ -107,6 +120,6 @@ export class AngularTestRerunComponent {
 
 
 
-
-
 }
+
+

@@ -35,6 +35,7 @@ import { compileClassMetadata } from '@angular/compiler';
 
 
 
+
 const appRoutes: Routes = [
 	{ path: 'form-control', component: FormControlComponent, title: 'Form Control' },
 	{ path: 'feedback', component: FeedbackComponent },
@@ -91,7 +92,8 @@ const appRoutes: Routes = [
 			appRoutes,
 			{ enableTracing: true } // <-- debugging
 		),
-		MatButtonToggleModule
+		MatButtonToggleModule,
+
 	],
   providers: [
 		CinemaServiceService
