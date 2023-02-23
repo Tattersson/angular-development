@@ -43,15 +43,15 @@
                 <input matInput type="text" id="firstname" name="firstname" formControlName="firstname" class="form-control" [ngClass]="" >
             </mat-form-field>
 
-            <div *ngIf="loanForm.controls['firstname'].invalid && (loanForm.controls['firstname'].touched || loanForm.controls['firstname'].dirty)" class="alert">
+            <div *ngIf="loanForm.controls['firstname'].invalid && (loanForm.controls['firstname'].touched || loanForm.controls['firstname'].dirty)" class="alert alert-warning">
 
-                    <div *ngIf="loanForm.errors?.['required']">
-                        Name required.
+                    <div *ngIf="firstname!.errors?.['required']">
+                        Name is required.
                     </div>
-                    <div *ngIf="loanForm.errors?.['minLength']">
+                    <div *ngIf="firstname!.errors?.['minLength']">
                         Name too short.
                     </div>
-                    <div *ngIf="loanForm.errors?.['pattern']">
+                    <div *ngIf="firstname!.errors?.['pattern']">
                         Name contains invalid characters.
                     </div>
 
@@ -64,7 +64,23 @@
             <mat-form-field appearance="fill" color="accent">
                 <mat-label>Lastname</mat-label>
                 <input matInput name="lastname" formControlName="lastname">
-            </mat-form-field><br>
+            </mat-form-field>
+            
+            <div *ngIf="loanForm.controls['lastname'].invalid && (loanForm.controls['lastname'].touched || loanForm.controls['lastname'].dirty)" class="alert alert-warning">
+
+                <div *ngIf="lastname!.errors?.['required']">
+                Name is required.
+                </div>
+                <div *ngIf="lastname!.errors?.['minLength']">
+                    Name too short.
+                </div>
+                <div *ngIf="lastname!.errors?.['pattern']">
+                    Name contains invalid characters.
+                </div>
+
+        </div>
+            
+            <br>
 
             <!--NationalID-->
             <mat-form-field appearance="fill" color="accent">
