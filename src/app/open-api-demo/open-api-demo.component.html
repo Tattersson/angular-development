@@ -22,11 +22,12 @@
 <div class="searchfield"> 
 
   <input matInput placeholder="Kirjoita hakusana" [(ngModel)] = "searchText">
+  <button class="clearFilter" *ngIf="searchText.length>0" (click)="clearFilter()">Clear</button>
 
 </div>
 
 <mat-accordion class="accordion">
-  <mat-expansion-panel *ngFor="let item of cinemaData | async | search: searchText" class="card" >
+  <mat-expansion-panel *ngFor="let item of cinemaData | search: searchText" class="card" >
 
     <mat-expansion-panel-header class="card-title">
         <mat-panel-title>{{item.Title}}</mat-panel-title>

@@ -10,7 +10,6 @@ const xml2js = require('xml2js')
 export class CinemaServiceService {
   url = "https://www.finnkino.fi/xml/News/"
  
-
   constructor(private httpClient: HttpClient ) {
     
    }
